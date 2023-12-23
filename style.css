@@ -1,0 +1,215 @@
+@font-face {
+  font-family: 'Daydream';
+  src: url('assets/fonts/daydream.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Compact';
+  src: url('assets/fonts/Compact-Regular.ttf') format('truetype');
+}
+
+body {
+  background-image: url("https://sadhost.neocities.org/images/tiles/pastelblue.png");
+  font-family: 'Compact';
+  color: white;
+}
+
+.container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+h3 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  font-family: 'Compact';
+}
+
+h1 {
+  font-family: 'Daydream';
+  font-size: 28px;
+  vertical-align: bottom;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav {
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 1000px;
+  background-color: #89CFF0;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  box-shadow:
+      0 1px 5px #0061aa,
+      inset 0 10px 20px #b6f9ff;
+}
+
+.content {
+  padding: 10px;
+  width: 1000px;
+  min-height: 500px;
+  overflow: hidden;
+  background-color: #89CFF0;
+  border-radius: 10px;
+  box-shadow:
+      0 1px 5px #0061aa,
+      inset 0 10px 20px #b6f9ff;
+  
+  margin-bottom: 5px;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  .nav,
+  .content {
+    width: 100%;
+    max-width: 90%;
+  }
+}
+
+.badges {
+  text-align: center;
+}
+
+.button {
+  position: relative;
+  display: inline-block;
+  padding: 0.418rem 0.418rem;
+  cursor: pointer;
+  color: #FFF;
+  letter-spacing: 1px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.9);
+  background: linear-gradient(#434343, #434343);
+  border: 1px solid #242424;
+  border-radius: 6px;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.25),
+    0 1px 0 rgba(255, 255, 255, 0.25) inset,
+    0 0 0 rgba(0, 0, 0, 0.5) inset,
+    0 1.25rem 0 rgba(255, 255, 255, 0.08) inset,
+    0 -1.25rem 1.25rem rgba(0, 0, 0, 0.3) inset,
+    0 1.25rem 1.25rem rgba(255, 255, 255, 0.1) inset;
+  
+  transition: all 0.2s linear 0s;
+  
+  text-align: center;
+  text-decoration: none;
+}
+
+button:hover,
+.button:focus {
+  text-decoration: none;
+  box-shadow:
+    0 2px 5px rgba(0, 0, 0, 0.5),
+    0 1px 0 rgba(255, 255, 255, 0.25) inset,
+    0 0 0 rgba(0, 0, 0, 0.25) inset,
+    0 20px 0 rgba(255, 255, 255, 0.03) inset,
+    0 -20px 20px rgba(0, 0, 0, 0.15) inset,
+    0 20px 20px rgba(255, 255, 255, 0.05) inset;
+}
+
+.button:active {
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.25),
+    0 1px 0 rgba(255, 255, 255, 0) inset,
+    0 0 5px rgba(0, 0, 0, 0.5) inset,
+    0 20px 0 rgba(255, 255, 255, 0.03) inset,
+    0 -20px 20px rgba(0, 0, 0, 0.15) inset,
+    0 20px 20px rgba(255, 255, 255, 0.05) inset;
+}
+
+.button::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background: linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
+  padding: x 12px;
+  top: 0;
+  left: 15%;
+  height: 1px;
+  width: 40%;
+  box-shadow: 0 1px 5px rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.button:active::before {
+  opacity: 0;
+}
+
+.button:hover::before {
+  left: 45%;
+}
+
+.button.green {
+  background: #4dcc8e;
+  color: white;
+  font-size: 15px;
+  font-weight: lighter;
+}
+
+.button.red {
+  background: red;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 5px;
+}
+
+button > img {
+  vertical-align: middle;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  overflow: auto;
+}
+
+.flex-right {
+  display: flex;
+  align-items: flex-end;
+  overflow: auto;
+}
+
+@media screen and (max-width: 600px) {
+  .flex {
+    flex-direction: column;
+  }
+
+  .flex-right {
+    flex-direction: column;
+  }
+}
+
+.nav img {
+  vertical-align: middle;
+}
+
+.left-align {
+  text-align: left;
+}
+
+@media screen and (max-width: 600px) {
+  .nav img {
+      display: none; /* Hide the image on mobile devices */
+  }
+
+  /* You can also adjust other styles for better mobile responsiveness */
+  .nav {
+      width: 100%; /* Set the width to 100% for full responsiveness */
+  }
+
+  .nav h1 {
+      margin-left: 0; /* Adjust the margin if needed */
+  }
+
+  /* Add any other mobile-specific styles here */
+}
